@@ -1,0 +1,26 @@
+Group 1 – Evengreener Stocks
+Kevin Sheekey
+Kyle Pavelka
+Meriane Franco
+Ravi Patel
+Yash Gandhi
+
+Project Proposal
+Objective:
+Predict stock price for traders. 
+Data: Stock data for the SPX 500 from the last 18 months.
+Machine Learning:  
+•	Machine Learning – Stock price prediction
+o	Train 5 days, test day number 6 
+o	500 companies, 18 months of data
+o	Resources:
+	Scikit-Learn
+	Tensorflow
+	JavaScript D3.js
+	Python Pandas
+	Keras
+	HTML/CSS/Bootstrap
+•	TreeMap with Stock current Data
+•	Heroku to host application.
+Bonus:
+•	Make it live
