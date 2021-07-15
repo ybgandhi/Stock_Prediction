@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" type="image/png" href="./Resources/logo_gs_black.png" />
+  <title>Greener Stocks</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="./Static/css/style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <a class="navbar-brand" href="./index.html"><img src="./Resources/logo_gs_color.png" id="stock_logo"
+        alt="Greener Stocks"></a>
+    <!-- Sintax to create the hamburger -->
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="./html_files/data.html">Data</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./html_files/who_we_are.html">Who we are</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- Create the overall grid -->
+  <div class="container">
+    <!-- Row0 -->
+    <section class="row">
+      <div class="col-md-2">
+
+        <!-- kevin's drop down -->
+        <select id="selDataset2" onchange="tickerChanged(this.value)">
+          <!-- <option value="">Select Ticker</option> -->
+        </select>
+
+        <select id="selDataset" onchange="sectorChanged(this.value)">
+          <option value="">Select Sector ()</option>
+        </select>
+      </div>
+      <!-- kevin's drop down end   -->
+
+
+      <div class="col-md-8">
+        <h1 id="main_title">SPX500 Insights</h1>
+      </div>
+    </section>
+  </div>
+  <div class="container-flid">
+    <section class="row">
+      <div class="span6" style="float: none; margin: 0 auto; background-color: black;">
+        <div class="col-md-12" id="my_dataviz"></div>
+      </div>
+    </section>
+  </div>
+  <div class="row">
+    <div class="col-md-8 peach">
+      <div id="candlestick"></div>
+    </div>
+
+    <div class="col-md-2">
+      <h4>
+        <div id="predictor"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+    </div>
+  </div>
+  <p>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="chartTitle"></div>
+      <div id="svg-area"></div>
+    </div>
+  </div>
+  <p>
+  <div class="row">
+    <div class="col-md-11">
+      <div id="static"></div>
+    </div>
+  </div>
+  <p>
+  <div class="row">
+    <div class="col-md-3">
+      <div id="statistics">
+        <ul class="listList"></ul>
+      </div>
+    </div>
+    <div class="col-md-3 ranked" >
+      
+        <ul class="listList"></ul>
+        <table class="table listList">
+          <tbody id="top10"></tbody>
+      </table>  
+    
+    </div>
+    <div class="col-md-3 ranked2">
+      
+        <table class="table listList" style="background-color: black;">
+          <ul class="listList"></ul>
+          <tbody id="bottom10"></tbody>
+      </table>
+      
+    </div>
+  </div>
+  </section>
+
+
+  <!-- </div> -->
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./Static/js/PlotlyCandle.js"></script>
+  <!-- <script src="/Static/data/stockInfo.json"></script> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v4.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="./Treemap/Static/js/treemap.js"></script>
+  <!-- <script src="../Resources/raviStockInfo.json"></script> -->
+</body>
+
+</html>
