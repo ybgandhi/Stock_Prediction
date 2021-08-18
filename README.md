@@ -1,6 +1,6 @@
 # Project_3
 
-Group2
+
 Kevin Sheekey
 Kyle Pavelka
 Yash Gandhi
